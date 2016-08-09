@@ -1,0 +1,291 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #141D24;
+}
+
+.forum-header {
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  font-size: 14px;
+  font-family: "Myriad Pro";
+}
+
+.header-left {
+  float: left;
+  margin-left: 10%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header-left ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header-left ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-right {
+  float: right;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 10%;
+  margin-top: -0.5%;
+}
+
+.header-right ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header-right ul li a {
+  text-decoration: none;
+}
+
+input[type="text"], input[type="password"] {
+  border-radius: 3px;
+  height: 20px;
+}
+
+#login-btn {
+  color: #fff;
+  background-color: #141D24;
+  border: none;
+  border-radius: 2px;
+  width: 60px;
+  height: 30px;
+}
+
+.content {
+  position: relative;
+  width: 80%;
+  min-height: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding-top: 5px
+}
+
+.content-header-01 {
+  width: 99%;
+  height: 150px;
+  background-color: #00294B;
+  margin: 0 auto -13px;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 0.5%;
+}
+
+.content-header-01 h1 {
+  padding-top: 3%;
+  font-size: 40px;
+  font-family: "Myriad Pro";
+  color: #b71c1c;
+}
+
+.content-header-02 {
+  width: 99%;
+  height: 70px;
+  background-color: #00294B;
+  margin: 0 auto -13px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.content-header-02 ul {
+  list-style-type: none;
+}
+
+.content-header-02 ul li {
+  display: inline-block;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+
+.content-header-02 ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Comic Sans Ms", cursive;
+}
+
+.content-header-02 ul li a:hover {
+  color: #000;
+}
+
+.content-header-03 {
+  width: 99%;
+  height: 50px;
+  background-color: #141D24;
+  margin: 0 auto -13px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.content-header-03 h4 {
+  color: #fff;
+  padding-top: 15px;
+  font-family: "Myriad Pro";
+}
+
+.footer {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  width: 99%;
+  height: 30px;
+  background-color: #00294B;
+  margin: 0 auto;
+  text-align: right;
+  border-radius: 5px;
+  padding-bottom: 1%;
+  font-family: "Myriad Pro";
+  color: #fff;
+  padding: 15px 2px 0 0;
+}
+
+#brand {
+  display: none;
+  transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -webkit-transtion: all 2s ease-in-out;
+}
+
+.registration {
+  text-align: center;
+  font-family: "Myriad Pro";
+}
+
+.empty {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 50px;
+  vertical-align: top;
+}
+
+.registration label.required::after {
+  content: '*';
+  color: red;
+}
+
+.registration input,
+.registration select,
+textarea
+ {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.registration button {
+  width: 150px;
+  height: 40px;
+  font-size: 25px;
+  font-family: "Myriad Pro";
+  background-color: #141D24;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.registration button:hover {
+  background-color: #00294B;
+  cursor: pointer;
+}
+
+#errorMsg {
+  background: #EC971F;
+  width: 97%;
+  height: auto;
+  margin: 20px auto;
+  text-align: left;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  display: none;
+}
+
+#errorMsg ul {
+  list-style-type: disc;
+}
+
+.infoText {
+  margin-top: 5%;
+  line-height: 1.5em;
+  text-align: center;
+  font-size: 25px;
+}
+
+.category {
+  width: 99%;
+  min-height: 200px;
+  height: auto;
+  margin: 0 auto;
+  font-family: "Myriad Pro";
+  padding-bottom: 20px;
+}
+
+.category .category-header {
+  width: 100%;
+  height: 30px;
+  background-color: #00294B;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.category .category-content {
+  padding-left: 20px;
+  color: #141D24;
+  height: 30px;
+}
+
+.category-content a {
+  text-decoration: none;
+  color: #00294B;
+}
+
+.category-content a:hover {
+  color: #141D24;
+}
+
+.topic-name {
+  width: 60%;
+  text-align: left;
+}
+
+.post-by {
+  width: 20%;
+}
+
+.topic-posts {
+  text-align: center;
+}
