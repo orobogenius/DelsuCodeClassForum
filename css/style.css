@@ -289,3 +289,25 @@ textarea {
 .topic-posts {
   text-align: center;
 }
+
+.search-user,
+.user-list {
+  width: 98%;
+  height: auto;
+  border-radius: 3px;
+  border: 2px solid #141D24;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 5px;
+  padding-bottom: 15px;
+}
+
+.user-list td {
+  width: 15%;
+}
+
+td.username {
+  width: 60%;
+  text-align: left;
+}
