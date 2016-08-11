@@ -7,6 +7,15 @@
 
   $dbh = connectToDatabase();
 
+  if (isset($_SESSION['username'])) {
+    if (getUserLevel($dbh, $_SESSION['username']) < 1) {
+        //User is not an administrator, redirect user to homepage
+        header('Location: ../.');
+    }
+  } else {
+    header('Location: ../.');
+  }
+
 ?>
 
 <div class="content">
@@ -59,7 +68,7 @@
             document.getElementById("errorMsg").style.display = "block";
         </script>';
       } else {
-        if (addThread($dbh, $name, $description, $cat_id)) {
+        if (addThread($dbh, $name, $description, $cat_id, getUserID($dbh, $_SESSION['username']))) {
           echo '<script>
               document.getElementById("errorMsg").innerHTML = "Operation Successful! The thread has been added to the category successfully.";
               document.getElementById("errorMsg").style.display = "block";
