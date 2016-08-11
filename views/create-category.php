@@ -5,7 +5,18 @@
   include('../utility/connect.php');
   include('../utility/db_functions.php');
 
+  session_start();
+
   $dbh = connectToDatabase();
+
+  if (isset($_SESSION['username'])) {
+    if (getUserLevel($dbh, $_SESSION['username']) != 2) {
+        //User is not an administrator, redirect user to homepage
+        header('Location: ../.');
+    }
+  } else {
+    header('Location: ../.');
+  }
 
 ?>
 
