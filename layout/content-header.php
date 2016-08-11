@@ -1,33 +1,31 @@
 <?php
 
-
-  $c_header = <<<END
-
-    <div class="content-header-01">
-      <h1 id="brand">Delsu CodeClass Forum &trade;</h1>
-    </div>
-    <div class="content-header-02">
-      <ul>
-        <li>
-          <a href="http://localhost/codeclassforum/">Home</a>
-        </li>
-        <li>
-          <a href="http://localhost/codeclassforum/views/view-members.php">Members</a>
-        </li>
-        <li>
-          <a href="http://localhost/codeclassforum/views/create-category.php">Create Category</a>
-        </li>
-        <li>
-          <a href="http://localhost/codeclassforum/views/create-topic.php">Create Topic</a>
-        </li>
-      </ul>
-    </div>
-    <div class="content-header-03">
-      <h4>Message Board</h4>
-    </div>
-
-END;
-
-echo $c_header;
+  echo '<div class="content-header-01">';
+    echo '<h1 id="brand">Delsu CodeClass Forum &trade;</h1>';
+  echo '</div>';
+  echo '<div class="content-header-02">';
+    echo '<ul>';
+      echo '<li>';
+        echo '<a href="http://localhost/codeclassforum/">Home</a>';
+      echo '</li>';
+      echo '<li>';
+        echo '<a href="http://localhost/codeclassforum/views/view-members.php">Members</a>';
+      echo '</li>';
+      if (isset($_SESSION['username'])) {
+        if (getUserLevel($dbh, $_SESSION['username']) == 2) {
+            //User is an administrator
+            echo '<li>';
+              echo '<a href="http://localhost/codeclassforum/views/create-category.php">Create Category</a>';
+            echo '</li>';
+        }
+        echo '<li>';
+          echo '<a href="http://localhost/codeclassforum/views/create-topic.php">Create Topic</a>';
+        echo '</li>';
+      }
+      echo '</ul>';
+    echo '</div>';
+    echo '<div class="content-header-03">';
+      echo '<h4>Message Board</h4>';
+    echo '</div>';
 
 ?>
