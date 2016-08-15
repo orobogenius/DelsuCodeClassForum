@@ -4,7 +4,7 @@
     $server = "localhost";
     $database = "codeclassforum";
     $user = "root";
-    $password = "this.mysql";
+    $password = "";
 
     $dbh = mysqli_connect($server, $user, $password, $database) or die(mysqli_connect_errno());
 
