@@ -38,6 +38,8 @@
         <input type="text" name="thread_name" id="name" /><br />
         <label for="desc">Description: </label>
         <textarea cols="48" rows="15" name="desc" id="desc"></textarea><br />
+        <label for="op">Post: </label>
+        <textarea cols="48" rows="15" name="original_post" id="op"></textarea><br />
         <label for="cat">Category: </label>
         <select name="category" id="cat">
           <?php
@@ -60,6 +62,7 @@
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
       $name = $_POST['thread_name'];
       $description = $_POST['desc'];
+      $post = $_POST['original_post'];
       $cat_id = $_POST['category'];
 
       if (checkIfThreadExists($dbh, $name, $cat_id)) {
@@ -68,7 +71,7 @@
             document.getElementById("errorMsg").style.display = "block";
         </script>';
       } else {
-        if (addThread($dbh, $name, $description, $cat_id, getUserID($dbh, $_SESSION['username']))) {
+        if (addThread($dbh, $name, $description, $post, $cat_id, getUserID($dbh, $_SESSION['username']))) {
           echo '<script>
               document.getElementById("errorMsg").innerHTML = "Operation Successful! The thread has been added to the category successfully.";
               document.getElementById("errorMsg").style.display = "block";

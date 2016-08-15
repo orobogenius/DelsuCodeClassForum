@@ -51,7 +51,7 @@
                 } else {
                   echo '<td>Member</td>';
                 }
-                echo '<td>#10 Posts</td>';
+                echo '<td>'.count(getNumberOfPosts($dbh, $user['user_id'])).' Posts</td>';
                 echo '<td>'.$user['reg_date'].'</td>';
               echo '</tr>';
             }
