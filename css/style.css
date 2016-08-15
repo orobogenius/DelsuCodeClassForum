@@ -311,3 +311,61 @@ td.username {
   width: 60%;
   text-align: left;
 }
+
+.post {
+  width: 97%;
+  min-height: 300px;
+  height: auto;
+  background-color: #F8F8F8;
+  margin: 0 auto 15px;
+  text-align: left;
+  padding: 10px 0 0 15px;
+  border-radius: 5px;
+}
+
+.post .user-data {
+  width: 20%;
+  height: 200px;
+  float: left;
+  text-align: center;
+}
+
+.user-data .username {
+  text-align: left;
+}
+
+.registration a {
+  color: #00294B;
+  text-decoration: none;
+}
+
+.user-data .profile-pic {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #00294B;
+  margin: 0 auto 15px;
+  box-shadow: 1px 5px 15px #000;
+}
+
+.post .divider {
+  width: 2px;
+  height: 300px;
+  background-color: #141D24;
+  float: left;
+}
+
+.post .user-post {
+  width: 75%;
+  height: 200px;
+  float: right;
+}
+
+.t_topic {
+  font-size: 25px;
+}
+
+textarea.reply {
+  width: 90%;
+  height: 300px;
+}
