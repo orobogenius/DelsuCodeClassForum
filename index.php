@@ -37,10 +37,12 @@
                       echo '<td class="topic-name"><a href="views/view_thread.php?t_id='.$topic['thread_id'].'">'.$topic['thread_name'].'</a><br />'.$topic['thread_desc'].'</td>';
                       echo '<td class="topic-posts">';
                         echo '<p>
-                              #1 <br />Posts
+                              '.count(getPosts($dbh, $topic['thread_id'])).' <br />Posts
                               </p>';
                       echo '</td>';
-                      echo '<td class="post-by">Last posted by: <a href="view/view_members.php/?u_id=5">username</a><span>&nbsp;&nbsp;</span><a href="views/view_thread.php?t_id='.$topic['thread_id'].'#5">V</a><br />0000-00-00 00:00:00</td>';
+                      $postdata = getLastPost($dbh, $topic['thread_id']);
+                      $userdata = getUserData($dbh, $postdata[0]['post_by']);
+                      echo '<td class="post-by">Last posted by: <a href="view/view_members.php/?u_id='.$userdata[0]['user_id'].'"> '.$userdata[0]['user_name'].'</a><span>&nbsp;&nbsp;</span><a href="views/view_thread.php?t_id='.$topic['thread_id'].'#5">V</a><br />'.$postdata[0]['post_date'].'</td>';
                   echo '</tr>';
                 }
               echo '</tbody>';
